@@ -974,14 +974,10 @@ MainTab:Slider({
     end
 })
 
-local Combat =
-    Window:Tab(
-    {
-        Title = "Combat",
-        Icon = "sword"
-    }
-)
-
+local CombatTab = Window:Tab({
+    Title = "Combat",
+    Icon = "swords"
+})
 
 --// SERVICES
 local Players = game:GetService("Players")
@@ -1138,18 +1134,18 @@ end)
 CombatTab:Toggle({
     Title = "Silent Aim",
     Default = SilentAimEnabled,
-    Callback = function(v)
-        SilentAimEnabled = v
-        FOVPoly.Visible = v and ShowFOV
+    Callback = function(state)
+        SilentAimEnabled = state
+        FOVPoly.Visible = state and ShowFOV
     end
 })
 
 CombatTab:Toggle({
     Title = "Show FOV",
     Default = ShowFOV,
-    Callback = function(v)
-        ShowFOV = v
-        FOVPoly.Visible = v and SilentAimEnabled
+    Callback = function(state)
+        ShowFOV = state
+        FOVPoly.Visible = state and SilentAimEnabled
     end
 })
 
