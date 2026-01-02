@@ -974,10 +974,13 @@ MainTab:Slider({
     end
 })
 
-local CombatTab = Window:Tab({
-    Title = "Combat",
-    Icon = "swords"
-})
+local Combat =
+    Window:Tab(
+    {
+        Title = "Combat",
+        Icon = "sword"
+    }
+)
 
 
 --// SERVICES
