@@ -383,6 +383,36 @@ local MainTab =
     }
 )
 
+local CombatTab = Window:Tab({
+    Title = "Combat",
+    Icon = "swords"
+})
+
+local EspTab = Window:Tab({
+    Title = "ESP",
+    Icon = "eye"
+})
+
+local GunModsTab = Window:Tab({
+    Title = "Gun Mods",
+    Icon = "crosshair"
+})
+
+local CarTab = Window:Tab({
+    Title = "Car",
+    Icon = "car"
+})
+
+local MiscTab = Window:Tab({
+    Title = "Misc",
+    Icon = "layers"
+})
+
+local ServerTab = Window:Tab({
+    Title = "Server",
+    Icon = "server"
+})
+
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
 local PlayerGui = Client:WaitForChild("PlayerGui")
@@ -974,10 +1004,7 @@ MainTab:Slider({
     end
 })
 
-local CombatTab = Window:Tab({
-    Title = "Combat",
-    Icon = "swords"
-})
+--// Combat
 
 --// SERVICES
 local Players = game:GetService("Players")
